@@ -1,0 +1,33 @@
+.Footer {
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.footerIcons {
+  margin-right: 10px;
+}
+
+
+.footerIcons a {
+  position: relative;
+  float: right;
+  padding-right: 20px;
+  padding-top: 20px;
+  color: #f8f8f2;
+  text-decoration: none;
+  font-size: 3rem;
+  transition: all 0.5s ease;
+}
+
+.footerIcons a:hover,
+.footerIcons a:active {
+  font-size: 3.5rem;
+  color: #50fa7b;
+}
+
+.footerIcons a:visited {
+  color: #f8f8f2;
+}
