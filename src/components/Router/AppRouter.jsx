@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Homepage from '../Homepage/Homepage';
-import Signup from '../Auth/Signup/Signup';
+import Signup from '../auth/Signup/Signup';
 import AdminDashboard from '../admin/AdminDashboard';
 
 function AppRouter() {
