@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import Homepage from '../Homepage/Homepage';
-import Create from '../Admin/CRUD/Create/Create';
 import Signup from '../Auth/Signup/Signup';
+import AdminDashboard from '../admin/AdminDashboard';
 
 function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/create" element={<Create />} />
+      <Route path="/admin" element={<AdminDashboard />} />
       <Route path="/signup" element={<Signup />} />
     </Routes>
   );
