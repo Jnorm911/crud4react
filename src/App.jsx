@@ -1,16 +1,14 @@
-import { Routes, Route } from 'react-router-dom';
-import Homepage from './components/Homepage/Homepage';
-import Create from './components/Admin/CRUD/Create/Create';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
+import AppRouter from './components/Router/AppRouter';
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/create" element={<Create />} />
-      </Routes>
-    </Layout>
+    <Router>
+      <Layout>
+        <AppRouter />
+      </Layout>
+    </Router>
   );
 }
 
