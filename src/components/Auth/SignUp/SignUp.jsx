@@ -47,7 +47,7 @@ function Signup() {
               </Form.Control>
             </Form.Group>
 
-            <Form.Group className="row justify-content-center " controlId="formBasicEmail">
+            <Form.Group className="row justify-content-center" controlId="formBasicEmail">
               <Form.Label className="form-label">Email address</Form.Label>
               <br />
               <Form.Control className="inputBox" type="email" placeholder="Enter email" />
