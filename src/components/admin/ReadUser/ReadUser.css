@@ -1,0 +1,48 @@
+.searchContainer {
+  background-color: #44475a;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.searchBar {
+  padding: 8px 150px;
+}
+
+table td, table th {
+  color: #f8f8f2 !important;
+}
+
+.pagination > li > a
+{
+    background-color: #282a36;
+    color: #50fa7b;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #f8f8f2;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: #f8f8f2;
+    background-color: #6272a4 !Important;
+    border: solid 1px #6272a4 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #6272a4 !Important;
+    border: solid 1px #6272a4;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background-color: #50fa7b;
+  color:#282a36;
+  border-color:#282a36;
+}

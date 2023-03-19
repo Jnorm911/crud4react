@@ -1,13 +1,16 @@
 .Footer {
   height: 100px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100vw;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .footerIcons {
   margin-right: 10px;
+  pointer-events: auto;
 }
 
 
@@ -25,7 +28,7 @@
 .footerIcons a:hover,
 .footerIcons a:active {
   font-size: 3.5rem;
-  color: #50fa7b;
+  color: #50fa7b !important;
 }
 
 .footerIcons a:visited {
