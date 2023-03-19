@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Table,
   FormControl,
@@ -7,6 +8,7 @@ import {
   Pagination,
   Row,
   Col,
+  Button,
 } from 'react-bootstrap';
 import api from '../../../services/api';
 import './ReadUser.css';
@@ -32,7 +34,7 @@ function ReadUser() {
   }, []);
 
   const filteredUsers = users.filter(
-    (user) => `${user.first_name} ${user.last_name} ${user.email} ${user.username} ${user.phone_number} ${user.gender} ${user.role}`
+    (user) => `${user.id} ${user.first_name} ${user.last_name} ${user.email} ${user.username} ${user.phone_number} ${user.gender} ${user.role}`
       .toLowerCase()
       .includes(searchTerm.toLowerCase()),
   );
@@ -93,6 +95,7 @@ function ReadUser() {
                 <th>Phone Number</th>
                 <th>Gender</th>
                 <th>Role</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -106,6 +109,11 @@ function ReadUser() {
                   <td>{user.phone_number}</td>
                   <td>{user.gender}</td>
                   <td>{user.role}</td>
+                  <td>
+                    <Link to={`/users/${user.id}`}>
+                      <Button variant="flat">Edit</Button>
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>

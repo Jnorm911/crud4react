@@ -46,3 +46,13 @@ table td, table th {
   color:#282a36;
   border-color:#282a36;
 }
+
+.btn-flat {
+  background-color: #ff79c6;
+  color: #f8f8f2;
+  margin: 10px 0;
+}
+.btn-flat:hover {
+  background-color: #ff79c6;
+  color: #f8f8f2;
+}
