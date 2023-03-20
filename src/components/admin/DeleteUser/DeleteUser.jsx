@@ -31,7 +31,6 @@ function DeleteUser() {
       setError('');
       setShowModal(true);
     } catch (deleteError) {
-      console.log(deleteError);
       setError('Error deleting user. Please try again.');
     }
   };
