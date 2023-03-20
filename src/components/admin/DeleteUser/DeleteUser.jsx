@@ -1,24 +1,44 @@
-import PropTypes from 'prop-types';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import {
-  Container, Row, Col, Button, Alert,
+  Container, Row, Col, Button, Alert, Modal,
 } from 'react-bootstrap';
 import api from '../../../services/api';
 
-function DeleteUser({ user, onUserDeleted }) {
+function DeleteUser() {
+  const { id } = useParams();
   const navigate = useNavigate();
+  const [user, setUser] = useState(null);
   const [error, setError] = useState('');
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await api.get(`/users/${id}`);
+        setUser(response.data);
+      } catch (fetchError) {
+        setError('Error fetching user data. Please try again.');
+      }
+    };
+
+    fetchUser();
+  }, [id]);
 
   const handleDelete = async () => {
     try {
-      await api.delete(`/users/${user.id}`);
+      await api.delete(`/users/${id}`);
       setError('');
-      onUserDeleted(); // Call the passed down function from AdminDashboard
-      navigate('/admin/dashboard'); // Redirect to the AdminDashboard page after deletion
+      setShowModal(true);
     } catch (deleteError) {
+      console.log(deleteError);
       setError('Error deleting user. Please try again.');
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    navigate('/admin/dashboard');
   };
 
   return (
@@ -50,17 +70,20 @@ function DeleteUser({ user, onUserDeleted }) {
           </Row>
         </>
       )}
+
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>User Deleted</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>User has been successfully deleted.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleCloseModal}>
+            Accept
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 }
-
-DeleteUser.propTypes = {
-  user: PropTypes.shape({
-    id: PropTypes.number,
-    first_name: PropTypes.string,
-    last_name: PropTypes.string,
-  }).isRequired,
-  onUserDeleted: PropTypes.func.isRequired,
-};
 
 export default DeleteUser;

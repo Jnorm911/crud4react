@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   Container, Row, Col, Form, Button, Alert,
 } from 'react-bootstrap';
@@ -6,6 +7,7 @@ import api from '../../../services/api';
 import './CreateUser.css';
 
 function CreateUser() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -17,9 +19,15 @@ function CreateUser() {
   });
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const location = useLocation();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const refreshPage = () => {
+    navigate(0);
+    navigate(location.pathname);
   };
 
   const handleSubmit = async (e) => {
@@ -37,6 +45,7 @@ function CreateUser() {
         gender: '',
         role: '',
       });
+      refreshPage();
     } catch (fetchError) {
       setSuccess(false);
       setError('Error creating user. Please try again.');
