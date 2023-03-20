@@ -10,7 +10,7 @@ function Header() {
             <Link to="/" className="navLink">HOME</Link>
           </li>
           <li className="navItem">
-            <Link to="/users/login" className="navLink">LOG IN</Link>
+            <Link to="/login" className="navLink">LOG IN</Link>
           </li>
           <li className="navItem">
             <Link to="/signup" className="navLink">SIGN UP</Link>

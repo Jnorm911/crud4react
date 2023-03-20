@@ -1,13 +1,14 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
 import AppRouter from './components/Router/AppRouter';
+import Header from './components/nav/Header/Header';
+import Footer from './components/nav/Footer/Footer';
 
 function App() {
   return (
     <Router>
-      <Layout>
-        <AppRouter />
-      </Layout>
+      <Header />
+      <AppRouter />
+      <Footer />
     </Router>
   );
 }

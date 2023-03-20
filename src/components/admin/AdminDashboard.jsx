@@ -1,7 +1,6 @@
 import CreateUser from './CreateUser/CreateUser';
 import ReadUser from './ReadUser/ReadUser';
 import './AdminDashboard.css';
-import withAuth from '../../hoc/withAuth';
 
 function AdminDashboard() {
   return (
@@ -15,4 +14,4 @@ function AdminDashboard() {
   );
 }
 
-export default withAuth(AdminDashboard);
+export default AdminDashboard;

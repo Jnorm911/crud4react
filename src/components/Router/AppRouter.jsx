@@ -19,7 +19,7 @@ function AppRouter() {
       <Route path="/admin/dashboard" element={<AdminDashboard />} />
       <Route path="/admin/delete-user/:id" element={<DeleteUser />} />
       <Route path="/success" element={<Success />} />
-      <Route path="/users/login" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/unauthorized" element={<Unauthorized />} />
       <Route element={<Lost />} />
     </Routes>
