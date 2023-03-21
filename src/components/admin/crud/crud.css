@@ -1,0 +1,10 @@
+.table thead th,
+.table tbody td {
+  color: #f8f8f2 !important;
+}
+.cardHolder {
+  background-color: #44475a;
+}
+h1 {
+  padding-bottom: 0;
+}

@@ -8,8 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Add this line */
-  z-index: -1; /* Set the z-index to a negative value */
+  position: relative;
+  /* Add this line */
+  z-index: -1;
+  /* Set the z-index to a negative value */
 }
 
 h1 {
