@@ -1,0 +1,14 @@
+  .first-icon {
+    padding-right: 10px;
+  }
+
+ a:hover {
+    color: #50fa7b;
+    transform: scale(1.25);
+  }
+
+.footerIcons {
+    color:#f8f8f2;
+    float: right;
+    padding-right:20px;
+  }

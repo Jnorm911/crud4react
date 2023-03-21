@@ -7,7 +7,7 @@ const Header = () => {
   const user = useRecoilValue(userState);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar sticky='top' variant="dark" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/">
           Home
@@ -31,9 +31,14 @@ const Header = () => {
               </>
             )}
             {!user.isLoggedIn && (
-              <Nav.Link as={Link} to="/login">
-                Login
-              </Nav.Link>
+              <>
+                <Nav.Link as={Link} to="/login">
+                  Login
+                </Nav.Link>
+                <Nav.Link as={Link} to="/signup">
+                  Sign Up
+                </Nav.Link>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>

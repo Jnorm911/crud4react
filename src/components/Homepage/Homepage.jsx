@@ -5,7 +5,7 @@ function Homepage() {
     <div className="backgroundImg">
       <div className="Homepage">
         <h1>
-          LOGIN TEST
+          CRUD OPERATIONS
           <br />
           for React
         </h1>

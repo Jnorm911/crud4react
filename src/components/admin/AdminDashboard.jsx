@@ -14,15 +14,17 @@ const AdminDashboard = () => {
   };
 
 return (
-  <div className="adminDashboard">
-    <h1>Admin Dashboard</h1>
-    {alert.show && (
-      <Alert variant="success" onClose={handleCloseAlert} dismissible>
-        {alert.message}
-      </Alert>
-    )}
-    <Create />
-    <Read tableUpdate={tableUpdate} setTableUpdate={setTableUpdate} />
+  <div className="centered">
+    <div className="adminDashboard">
+      <h1>Admin Dashboard</h1>
+      {alert.show && (
+        <Alert variant="success" onClose={handleCloseAlert} dismissible>
+          {alert.message}
+        </Alert>
+      )}
+      <Create />
+      <Read tableUpdate={tableUpdate} setTableUpdate={setTableUpdate} />
+    </div>
   </div>
 );
 }

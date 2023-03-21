@@ -1,14 +1,17 @@
 import { useSetRecoilState } from 'recoil';
 import { userState } from '../../../state/user';
+import { alertState } from '../../../state/alert';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Logout = () => {
   const setUser = useSetRecoilState(userState);
   const navigate = useNavigate();
+  const setAlert = useSetRecoilState(alertState);
 
   const handleLogout = () => {
     setUser({ isLoggedIn: false, userData: null });
+    setAlert({ show: false, message: '' });
     navigate('/logoutsuccess');
   };
 
