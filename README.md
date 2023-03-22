@@ -1,6 +1,6 @@
 # CRUD4REACT
 
-This is a fully-functional template for performing CRUD operations within React.js. Included is a fully-functional user experience, with support for login, logout, and signup functionality. Users can access a range of pages and features based on their assigned roles and permissions, including administrative dashboards and other specialized functionality.
+This is a fully-functional template for performing CRUD operations within React.js. Included is a fully-functional user experience, with support for login, logout, and signup functionality. Users can access a range of pages and features based on their assigned roles and permissions, including administrative dashboards, security with HOC, and other specialized functionality.
 
 ## Libraries and tools used
 
@@ -12,7 +12,8 @@ MockAPI is not secure and you should use a secure DB when using the user experie
 
 # TODO
 
-Various ui and css fixes to make it look more professional.
+Various ui, alert, and css fixes to make it look more professional.
+Regex.
 
 # Getting Started with Create React App
 

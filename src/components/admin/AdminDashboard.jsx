@@ -1,3 +1,4 @@
+import withAdminRole from '../../utils/withAdminRole';
 import { Alert } from 'react-bootstrap';
 import { useRecoilState } from 'recoil';
 import { alertState } from '../../state/alert';
@@ -29,4 +30,4 @@ return (
 );
 }
 
-export default AdminDashboard;
+export default withAdminRole(AdminDashboard);

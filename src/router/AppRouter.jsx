@@ -11,6 +11,9 @@ import Header from '../components/nav/Header';
 import Footer from '../components/nav/Footer';
 import Update from '../components/admin/crud/Update';
 import Delete from '../components/admin/crud/Delete';
+import Unauthorized from '../components/pages/Unauthorized';
+import NotFound from '../components/pages/NotFound';
+
 const AppRouter = () => {
   return (
     <>
@@ -27,6 +30,8 @@ const AppRouter = () => {
           <Route path="/user" element={<UserProfile />} />
           <Route path="/update/:id" element={<Update />} />
           <Route path="/delete/:id" element={<Delete />} />
+          <Route path="/unauthorized" element={<Unauthorized />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />

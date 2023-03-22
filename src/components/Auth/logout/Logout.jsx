@@ -16,18 +16,20 @@ const Logout = () => {
   };
 
   const handleCancel = () => {
-    navigate('/');
+    navigate(-1);
   };
 
   return (
-    <div>
-      <h1>Are you sure you want to log out?</h1>
-      <Button variant="danger" onClick={handleLogout}>
-        Log Out
-      </Button>
-      <Button variant="secondary" onClick={handleCancel} style={{ marginLeft: '10px' }}>
-        Cancel
-      </Button>
+    <div className="centered">
+      <div>
+        <h1>Are you sure you want to log out?</h1>
+        <Button variant="danger" onClick={handleLogout}>
+          Log Out
+        </Button>
+        <Button variant="secondary" onClick={handleCancel} style={{ marginLeft: '10px' }}>
+          Cancel
+        </Button>
+      </div>
     </div>
   );
 };

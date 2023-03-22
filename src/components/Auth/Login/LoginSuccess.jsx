@@ -6,10 +6,12 @@ const LoginSuccess = () => {
   const { email, role } = user.userData;
 
   return (
-    <div>
-      <h1>Login Successful!</h1>
-      <p>Welcome, {email}!</p>
-      <p>Your role is: {role}</p>
+    <div className="centered">
+      <div>
+        <h1>Login Successful!</h1>
+        <p>Welcome, {email}!</p>
+        <p>Your role is: {role}</p>
+      </div>
     </div>
   );
 };

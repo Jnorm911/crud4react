@@ -9,12 +9,14 @@ const LogoutSuccess = () => {
   };
 
   return (
-    <div>
-      <h1>Logout Successful!</h1>
-      <p>You have been logged out.</p>
-      <Button variant="primary" onClick={handleBackToHome}>
-        Back to Home
-      </Button>
+    <div className="centered">
+      <div>
+        <h1>Logout Successful!</h1>
+        <p>You have been logged out.</p>
+        <Button variant="primary" onClick={handleBackToHome}>
+          Back to Home
+        </Button>
+      </div>
     </div>
   );
 };
